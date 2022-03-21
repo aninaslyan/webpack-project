@@ -7,4 +7,4 @@ function test() {
 }
 
 test();
-logSomething(5);
+logSomething('test');

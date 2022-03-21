@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
-    entry: './index.js',
+    entry: './index.ts',
     output: {
         filename: "index.bundle.js"
     },
@@ -19,10 +19,18 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.ts$/i,
+                exclude: /node_modules/,
+                loader: 'ts-loader',
+            },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
     plugins: [
         new HTMLWebpackPlugin({
