@@ -1,6 +1,6 @@
-import "./index.css";
+import "./index.scss";
 
-import { logSomething } from './script2';
+import { logSomething } from './scripts/script2';
 
 function test() {
     console.log('test');
