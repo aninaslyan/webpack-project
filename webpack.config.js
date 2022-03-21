@@ -15,6 +15,7 @@ const config = {
         port: 4200,
         open: true,
     },
+    devtool: "inline-source-map",
     module: {
         rules: [
             {
