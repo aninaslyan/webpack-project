@@ -1,3 +1,5 @@
+import "./index.css";
+
 import { logSomething } from './script2';
 
 function test() {
